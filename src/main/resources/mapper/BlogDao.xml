@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zwy.dao.BlogDao">
+
+    <resultMap id="User" type="com.zwy.pojo.User">
+        <id property="id" column="id"/>
+        <result property="nickname" column="nickname"/>
+        <result property="username" column="username"/>
+        <result property="email" column="email"/>
+        <result property="avatar" column="avatar"/>
+    </resultMap>
+
+    <resultMap id="blog" type="com.zwy.vo.BlogQuery">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="recommend" column="recommend"/>
+        <result property="published" column="published"/>
+        <result property="typeId" column="type_id"/>
+        <association property="type" javaType="com.zwy.pojo.Type">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+
+    <!--查询文章管理列表-->
+    <select id="getAllBlogQuery" resultMap="blog">
+        select b.id,b.title,b.update_time,b.recommend,b.published,b.type_id,t.id,t.name from t_blog b left outer join
+        t_type t on b.type_id = t.id order by b.update_time desc
+    </select>
+
+    <resultMap id="showblog" type="com.zwy.vo.ShowBlog">
+        <id property="id" column="id"/>
+        <result property="flag" column="flag"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="typeId" column="type_id"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="description" column="description"/>
+        <result property="recommend" column="recommend"/>
+        <result property="published" column="published"/>
+        <result property="shareStatement" column="share_statement"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="commentabled" column="commentabled"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="searchByTitleOrTypeOrRecommend" parameterType="com.zwy.vo.SearchBlog" resultMap="blog">
+        <bind name="pattern" value="'%' + title + '%'"/>
+        select b.id,b.title,b.update_time,b.recommend,b.type_id,t.id,t.name from t_blog b ,t_type t
+        <where>
+            <if test="1 == 1">
+                b.type_id = t.id
+            </if>
+            <if test="typeId != null">
+                and b.type_id = #{typeId}
+            </if>
+            <if test="title != null">
+                and b.title like #{pattern}
+            </if>
+        </where>
+    </select>
+
+    <resultMap id="firstPageBlog" type="com.zwy.vo.FirstPageBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="views" column="views"/>
+        <!--        <result property="commentCount" column="comment_count"/>-->
+        <result property="updateTime" column="update_time"/>
+        <result property="description" column="description"/>
+
+        <result property="typeName" column="name"/>
+
+        <result property="nickname" column="nickname"/>
+        <result property="avatar" column="avatar"/>
+    </resultMap>
+
+    <select id="getFirstPageBlog" resultMap="firstPageBlog">
+        select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description,
+        t.name ,
+        u.nickname, u.avatar
+        from t_blog b, t_type t,t_user u
+        where b.type_id = t.id and  u.id = b.user_id order by b.update_time desc
+    </select>
+
+    <resultMap id="recommendBlog" type="com.zwy.vo.RecommendBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="recommend" column="recommend"/>
+        <result property="firstPicture" column="first_picture"/>
+    </resultMap>
+
+    <!--推荐文章-->
+    <select id="getAllRecommendBlog" resultMap="recommendBlog">
+        select * from t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4;
+    </select>
+
+    <!--搜索文章-->
+    <select id="getSearchBlog" resultMap="firstPageBlog">
+        <bind name="pattern" value="'%' + query + '%'"/>
+        select b.id,b.title,b.first_picture, b.views,b.comment_count,b.update_time,b.description,
+        t.name ,
+        u.nickname, u.avatar
+        from t_blog b, t_type t,t_user u
+        where b.type_id = t.id and u.id = b.user_id and (b.title like #{pattern} or b.content like #{pattern})
+        order by b.update_time desc
+    </select>
+
+
+    <resultMap id="detailedBlog" type="com.zwy.vo.DetailedBlog">
+        <id property="id" column="bid"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="flag" column="flag"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="typeName" column="name"/>
+        <result property="views" column="views"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="commentabled" column="commentabled"/>
+        <result property="shareStatement" column="share_statement"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="nickname" column="nickname"/>
+        <result property="avatar" column="avatar"/>
+    </resultMap>
+
+    <!--博客详情查询-->
+    <select id="getDetailedBlog" resultMap="detailedBlog">
+        select b.id bid,b.first_picture,b.flag,b.title,b.content,b.views,b.comment_count,b.update_time,b.commentabled,b.share_statement,b.appreciation, u.nickname,u.avatar,t.name
+        from t_blog b,t_user u, t_type t
+        where b.user_id = u.id and b.type_id = t.id and b.id = #{id}
+    </select>
+
+    <!--查询出文章评论数量并更新-->
+    <update id="getCommentCountById" parameterType="com.zwy.pojo.Blog">
+        update t_blog b set b.comment_count = (
+        select count(*) from t_comment c where c.blog_id = #{id} and b.id = #{id}
+        ) WHERE b.id = #{id}
+    </update>
+
+    <!--分类页面查询b.comment_count,-->
+    <select id="getByTypeId" resultMap="firstPageBlog">
+        select b.id,b.title,b.first_picture, b.views,  b.update_time, b.description,
+        t.name ,
+        u.nickname, u.avatar
+        from t_blog b, t_type t,t_user u
+        where b.type_id = t.id and u.id = b.user_id and b.type_id = #{typeId} order by b.update_time desc
+    </select>
+
+</mapper>

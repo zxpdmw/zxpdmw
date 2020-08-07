@@ -1,0 +1,1003 @@
+2020-06-28 08:27:35.953  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.955  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.956  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.956  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.956  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.956  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.956  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:27:35.957  WARN 3968 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 08:48:21.745  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.747  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.747  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.748  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.748  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.748  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.749  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:48:21.749  WARN 2396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 08:48:47.401 ERROR 2396 --- [http-nio-8080-exec-3] c.z.c.hander.ControllerExceptionHandler  : Requst URL : http://localhost:8080/admin/login，Exception : {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist
+### The error may exist in com/zwy/dao/UserDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,nickname,username,password,email,avatar,type,create_time,update_time  FROM user     WHERE (name = ? AND password = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy73.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:108)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy93.selectOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy94.selectOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.getOne(ServiceImpl.java:184)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:225)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.zwy.service.Impl.UserServiceImpl$$EnhancerBySpringCGLIB$$dddbb106.getOne(<generated>)
+	at com.zwy.controller.admin.LoginController.login(LoginController.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy112.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 76 common frames omitted
+
+2020-06-28 08:48:47.406  WARN 2396 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist
+### The error may exist in com/zwy/dao/UserDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,nickname,username,password,email,avatar,type,create_time,update_time  FROM user     WHERE (name = ? AND password = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'blog.user' doesn't exist]
+2020-06-28 08:50:30.072  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.074  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.075  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.075  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.075  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.076  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.076  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:50:30.077  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 08:51:13.074 ERROR 728 --- [http-nio-8080-exec-4] c.z.c.hander.ControllerExceptionHandler  : Requst URL : http://localhost:8080/admin/login，Exception : {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause'
+### The error may exist in com/zwy/dao/UserDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,nickname,username,password,email,avatar,type,create_time,update_time  FROM t_user     WHERE (name = ? AND password = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy76.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:108)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy96.selectOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy97.selectOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.getOne(ServiceImpl.java:184)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:225)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.zwy.service.Impl.UserServiceImpl$$EnhancerBySpringCGLIB$$28778cb4.getOne(<generated>)
+	at com.zwy.controller.admin.LoginController.login(LoginController.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy115.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 76 common frames omitted
+
+2020-06-28 08:51:13.078  WARN 728 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause'
+### The error may exist in com/zwy/dao/UserDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,nickname,username,password,email,avatar,type,create_time,update_time  FROM t_user     WHERE (name = ? AND password = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'where clause']
+2020-06-28 08:51:45.902  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.903  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.903  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.904  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.904  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.904  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.904  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:51:45.904  WARN 728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 08:53:40.409  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.411  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.412  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.412  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.412  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.412  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.413  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:53:40.413  WARN 1928 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 08:54:50.599 ERROR 1928 --- [http-nio-8080-exec-5] c.z.c.hander.ControllerExceptionHandler  : Requst URL : http://localhost:8080/admin/pictures/1，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-06-28 08:54:50.603  WARN 1928 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-06-28 08:55:00.287  WARN 1928 --- [http-nio-8080-exec-7] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-06-28 08:55:53.751 ERROR 1928 --- [http-nio-8080-exec-1] c.z.c.hander.ControllerExceptionHandler  : Requst URL : http://localhost:8080/message，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-06-28 08:55:53.752  WARN 1928 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-06-28 08:56:27.757  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.759  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.759  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.759  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.759  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.759  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.759  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 08:56:27.760  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:11:09.351  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.352  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.353  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.353  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.353  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.353  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.354  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:09.354  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:11:20.360  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.361  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.361  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.362  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.362  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.362  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.362  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:11:20.363  WARN 13408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:14:07.622  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.624  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.624  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.625  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.626  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.626  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.627  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:07.628  WARN 10016 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:14:47.684  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.686  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.686  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.686  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.686  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.686  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.687  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:14:47.687  WARN 1728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:15:45.089  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.091  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.091  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.092  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.092  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.092  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.093  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:45.093  WARN 16324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:15:53.615  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.617  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.617  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.618  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.618  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.618  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.619  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:15:53.619  WARN 10700 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:28:10.877  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.880  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.880  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.880  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.880  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.880  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.881  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:28:10.881  WARN 11028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:32:51.942  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.945  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.945  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.945  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.945  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.945  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.945  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:32:51.946  WARN 11716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:43:17.832  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.836  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.836  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.836  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.837  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.837  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.837  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:43:17.838  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:53:25.349  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.350  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.351  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.351  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.352  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.353  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.353  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:25.354  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:53:25.935  WARN 10268 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archiveShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zwy.service.BlogService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-06-28 09:53:26.200 ERROR 10268 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field blogService in com.zwy.controller.ArchiveShowController required a bean of type 'com.zwy.service.BlogService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zwy.service.BlogService' in your configuration.
+
+2020-06-28 09:53:33.348  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.350  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.351  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.352  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.353  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.355  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.355  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:53:33.356  WARN 11304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:55:16.133  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.133  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.133  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.133  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.133  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.134  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.134  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:16.134  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:55:17.067  WARN 10268 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archiveShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogDao' defined in file [D:\Projects\Java\zxpdmw\target\classes\com\zwy\dao\BlogDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+2020-06-28 09:55:17.173 ERROR 10268 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archiveShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogDao' defined in file [D:\Projects\Java\zxpdmw\target\classes\com\zwy\dao\BlogDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zwy.ZxpdmwApplication.main(ZxpdmwApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogDao' defined in file [D:\Projects\Java\zxpdmw\target\classes\com\zwy\dao\BlogDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogDao' defined in file [D:\Projects\Java\zxpdmw\target\classes\com\zwy\dao\BlogDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:595)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:430)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:628)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:214)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$dc270499.CGLIB$sqlSessionFactory$1(<generated>)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$dc270499$$FastClassBySpringCGLIB$$bac8746c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$dc270499.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:593)
+	... 76 common frames omitted
+Caused by: java.lang.TypeNotPresentException: Type com.zwy.pojo.Comment not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.MethodRepository.getReturnType(MethodRepository.java:68)
+	at java.lang.reflect.Method.getGenericReturnType(Method.java:255)
+	at org.apache.ibatis.reflection.TypeParameterResolver.resolveReturnType(TypeParameterResolver.java:48)
+	at org.apache.ibatis.reflection.Reflector.addGetMethod(Reflector.java:132)
+	at org.apache.ibatis.reflection.Reflector.resolveGetterConflicts(Reflector.java:121)
+	at org.apache.ibatis.reflection.Reflector.addGetMethods(Reflector.java:90)
+	at org.apache.ibatis.reflection.Reflector.<init>(Reflector.java:66)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at org.apache.ibatis.reflection.DefaultReflectorFactory.findForClass(DefaultReflectorFactory.java:42)
+	at org.apache.ibatis.reflection.MetaClass.<init>(MetaClass.java:39)
+	at org.apache.ibatis.reflection.MetaClass.forClass(MetaClass.java:43)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:84)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:67)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:45)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 78 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.zwy.pojo.Comment
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 106 common frames omitted
+
+2020-06-28 09:55:20.526  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.526  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.526  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.526  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.526  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.527  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.527  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:20.527  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:55:27.195  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.196  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.196  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.197  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.197  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.197  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.197  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:55:27.198  WARN 3764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:56:47.175  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.176  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.176  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.177  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.177  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.177  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.177  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:47.177  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:56:57.889  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.891  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.892  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.893  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.893  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.893  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.894  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:56:57.895  WARN 9384 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:57:59.791  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.793  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.793  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.793  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.793  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.794  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.794  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:57:59.795  WARN 10308 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 09:59:05.884  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.885  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.886  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.886  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.887  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.887  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.887  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 09:59:05.888  WARN 15524 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:01:32.348  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.349  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.349  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.349  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.349  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.350  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.350  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:01:32.350  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:01:34.332  WARN 10268 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentController': Unsatisfied dependency expressed through field 'commentService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zwy.service.CommentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-06-28 10:01:34.518 ERROR 10268 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field commentService in com.zwy.controller.CommentController required a bean of type 'com.zwy.service.CommentService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zwy.service.CommentService' in your configuration.
+
+2020-06-28 10:02:10.084  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:10.084  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:10.085  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:10.085  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:10.085  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:10.085  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:10.085  WARN 10268 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:02:12.714  WARN 10268 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'commentService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zwy.service.CommentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-06-28 10:02:13.138 ERROR 10268 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field commentService in com.zwy.controller.IndexController required a bean of type 'com.zwy.service.CommentService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zwy.service.CommentService' in your configuration.
+
+2020-06-28 10:02:22.000  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.002  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.002  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.003  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.003  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.003  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.004  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:02:22.004  WARN 18272 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:03:02.561  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.562  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.562  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.562  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.563  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.564  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.564  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:03:02.565  WARN 16748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:11:31.949  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.952  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.952  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.952  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.952  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.953  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.953  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:11:31.953  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:26:44.154  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.156  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.156  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.156  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.156  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.157  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.157  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:44.157  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:26:53.932  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.934  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.935  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.935  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.936  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.936  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.936  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:26:53.939  WARN 6780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:31:40.817  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.818  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.818  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.819  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.819  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.820  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.826  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:40.826  WARN 1420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:31:41.349  WARN 1420 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archiveShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zwy.service.BlogService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-06-28 10:31:41.642 ERROR 1420 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field blogService in com.zwy.controller.ArchiveShowController required a bean of type 'com.zwy.service.BlogService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zwy.service.BlogService' in your configuration.
+
+2020-06-28 10:31:49.197  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.199  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.199  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.199  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.199  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.199  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.199  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:31:49.200  WARN 3408 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:33:09.438  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.439  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.439  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.440  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.440  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.441  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.441  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:33:09.442  WARN 18324 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 10:38:22.350  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.352  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.353  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.353  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.353  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.353  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.353  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 10:38:22.354  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:11:15.854  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:11:16.131  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:11:17.964  WARN 16684 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+2020-06-28 11:11:18.095 ERROR 16684 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zwy.ZxpdmwApplication.main(ZxpdmwApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 25 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:595)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:430)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:628)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:214)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$a85dda14.CGLIB$sqlSessionFactory$0(<generated>)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$a85dda14$$FastClassBySpringCGLIB$$a829f0aa.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$a85dda14.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 26 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Projects\Java\zxpdmw\target\classes\mapper\BlogDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:593)
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 41 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.zwy.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 45 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.zwy.pojo.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 47 common frames omitted
+
+2020-06-28 11:11:22.442  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.442  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.442  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.443  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.443  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.443  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.443  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:11:22.443  WARN 16684 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:11:27.414  WARN 16684 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zwy.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-06-28 11:11:27.635 ERROR 16684 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.zwy.controller.admin.LoginController required a bean of type 'com.zwy.service.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zwy.service.UserService' in your configuration.
+
+2020-06-28 11:14:16.968  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.970  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.971  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.971  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.971  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.971  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.971  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:14:16.972  WARN 8972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:23:53.619  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.624  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.625  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.625  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.626  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.628  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.629  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:23:53.630  WARN 18816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:37:00.821  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.826  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.826  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.826  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.826  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.826  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.827  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:37:00.827  WARN 16288 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.
+2020-06-28 11:44:04.743  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.zwy.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.zwy.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'friendLinkDao' and 'com.zwy.dao.FriendLinkDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'messageDao' and 'com.zwy.dao.MessageDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'pictureDao' and 'com.zwy.dao.PictureDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.zwy.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.zwy.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2020-06-28 11:44:04.769  WARN 4240 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zwy]' package. Please check your configuration.

@@ -1,0 +1,38 @@
+
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: pro
+  messages:
+    basename: i18n/messages
+
+comment.avatar: /images/avatar.png
+message.avatar: /images/avatar.png
+server:
+  port: 80
+---
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-2zeqer8186x8o6hi9vo.mysql.rds.aliyuncs.com:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: zxpdmw
+    password: Zxpdmw520
+    type: com.alibaba.druid.pool.DruidDataSource
+  profiles: pro
+logging:
+  level:
+    root: warn
+    com.star: info
+  file:
+    name: log/blog-pro.log
+
+mybatis:
+  type-aliases-package: com.star.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+

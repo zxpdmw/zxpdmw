@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zwy.dao.MessageDao">
+
+    <!--查询父级留言-->
+    <select id="findByParentIdNull" resultType="com.zwy.pojo.Message">
+        select *
+        from t_message c
+        where c.parent_message_id = #{ParentId}
+        order by c.create_time desc
+    </select>
+
+    <!--查询一级回复-->
+    <select id="findByParentIdNotNull" resultType="com.zwy.pojo.Message">
+        select *
+        from t_message c
+        where c.parent_message_id = #{id}
+        order by c.create_time desc
+    </select>
+
+    <!--查询二级以及所有子集回复-->
+    <select id="findByReplayId" resultType="com.zwy.pojo.Message">
+        select *
+        from t_message c
+        where c.parent_message_id = #{childId}
+        order by c.create_time desc
+    </select>
+
+</mapper>
