@@ -15,9 +15,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-2zeqer8186x8o6hi9vo.mysql.rds.aliyuncs.com:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
-    username: zxpdmw
-    password: Zxpdmw520
+    url: jdbc:mysql://XXXXXXXXX:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: XXXXX
+    password: XXXXX
     type: com.alibaba.druid.pool.DruidDataSource
   profiles: pro
 logging:
