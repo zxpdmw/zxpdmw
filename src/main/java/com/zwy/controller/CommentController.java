@@ -33,8 +33,7 @@ public class CommentController {
     @Autowired
     private BlogService blogService;
 
-    @Value("${comment.avatar}")
-    private String avatar;
+    private String avatar="https://zwyblog.oss-cn-beijing.aliyuncs.com/avatar.jpg";
 
     /**
     * @Description: comments 查询评论列表

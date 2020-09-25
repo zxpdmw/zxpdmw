@@ -28,8 +28,8 @@ public class MessageController {
     @Autowired
     private MessageService messageService;
 
-    @Value("${message.avatar}")
-    private String avatar;
+
+    private String avatar="https://zwyblog.oss-cn-beijing.aliyuncs.com/avatar.jpg";
 
     @GetMapping("/message")
     public String message() {
