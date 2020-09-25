@@ -27,7 +27,7 @@ logging:
     name: log/blog-pro.log
 
 mybatis:
-  type-aliases-package: com.star.entity
+  type-aliases-package: com.zwy.entity
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
