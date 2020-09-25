@@ -4,9 +4,9 @@
     <meta name="baidu-site-verification" content="U67Xy1Qfos" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZXPDMWの客栈</title>
+    <title>ZXPの客栈</title>
 
-    <link href="../static/images/favicon.ico" th:href="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/favicon.ico}" rel="icon" type="image/x-ico">
+    <link href="../static/images/favicon.ico" th:href="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/touxiang.jpg}" rel="icon" type="image/x-ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
@@ -18,7 +18,7 @@
 <nav id="nav" class="gird-header" style="display: none">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui olive header item" style="font-family: STSong">ZXPDMW</h2>
+            <h2 class="ui olive header item" style="font-family: STSong">ZXP</h2>
             <!--<div class="right m-item item m-mobile-hide">-->
             <a href="#" th:href="@{/}" class="active m-item item"><i class="home icon"></i>首页</a>
                 <a href="#" th:href="@{/types/-1}" class="m-item item"><i class="clone outline icon"></i>分类</a>
@@ -49,19 +49,19 @@
 
 <!--顶部图片-->
 <div class="m-bg-class_outer" style="width: 100%;height: 750px">
-    <img src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/background/YourName.jpg" th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/background/YourName.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <img th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/YourName.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
     <div class="m-bg-class_cover" align="center">
         <div class="m-margin-top-maxx" align="center">
-            <img class="ui circular image" align="center" src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/touxiang.jpg" th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/touxiang.jpg}" style="width: 150px;height: 150px;">
+            <img class="ui circular image" align="center"  th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/touxiang.jpg}" style="width: 150px;height: 150px;">
         </div>
-        <div class="m-font-size-title-mediul" align="center">ZXPDMW</div>
+        <div class="m-font-size-title-mediul" align="center">ZXP</div>
 
         <div class="" align="center">
 <!--            <a href="#" class="ui tencent circular icon button"><i class="user icon"></i></a>-->
             <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
             <a href="#" class="ui qq circular icon button" data-content="316392836" data-position="bottom center"><i class="qq icon"></i></a>
-<!--            <a href="https://github.com/ZXPDMWLR/" target="_blank" class="ui github circular icon button" data-content="点击跳转GitHub" data-position="bottom center"><i class="github icon"></i></a>-->
-<!--            <a href="https://ZXPDMW.blog.csdn.net/" target="_blank" class="ui csdn circular icon button" data-content="点击跳转CSDN" data-position="bottom center"><i class="copyright outline icon"></i></a>-->
+            <a href="https://github.com/zxpdmw/" target="_blank" class="ui github circular icon button" data-content="点击跳转GitHub" data-position="bottom center"><i class="github icon"></i></a>
+            <a href="https://ZXPDMW.blog.csdn.net/" target="_blank" class="ui csdn circular icon button" data-content="点击跳转CSDN" data-position="bottom center"><i class="copyright outline icon"></i></a>
             <a href="#" class="ui email circular icon button" data-content="zxpdmw@qq.com" data-position="bottom center"><i class="envelope  icon"></i></a>
         </div>
 
@@ -70,11 +70,11 @@
 <!--            <div align="center">公众号</div>-->
 <!--        </div>-->
         <div class="ui wechat-qr flowing popup transition hidden">
-            <img src="https://zwyblog.oss-cn微信-beijing.aliyuncs.com/img/ZXPDMW/wechat.jpg" th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
-            <div align="center"></div>
+            <img  th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">WeChat</div>
         </div>
         <div class="ui qq-qr flowing popup transition hidden">
-            <img src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/qq.jpg" th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/qq.jpg}" alt="" class="ui rounded image" style="width: 110px">
+            <img  th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/qq.jpg}" alt="" class="ui rounded image" style="width: 110px">
             <div align="center">QQ</div>
         </div>
 
@@ -143,7 +143,7 @@
                                 <div class="eleven wide column">
                                     <div class="ui mini horizontal link list">
                                         <div class="item">
-                                            <img src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/touxiang.jpg" th:src="@{${blog.avatar}}"  alt="" class="ui avatar image">
+                                            <img  th:src="@{${blog.avatar}}"  alt="" class="ui avatar image">
                                             <div class="content"><a href="#" th:href="@{/about}" target="_blank" class="header" th:text="${blog.nickname}" >ZXPDMW</a></div>
                                         </div>
                                         <div class="item">
@@ -165,7 +165,7 @@
                         <!--博文图片-->
                         <div class="five wide column">
                             <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                                <img src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/background/back.jpg" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">
+                                <img  th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">
                             </a>
                         </div>
 
@@ -226,7 +226,7 @@
                     <div class="item">
                         <!--微信二维码-->
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >随便放的</div>
-                        <img src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/touxiang.jpg" th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/touxiang.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <img  th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/touxiang.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
@@ -234,9 +234,9 @@
             <div class="four wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-<!--                        QQ群-->
+                        <!--                        QQ群-->
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流（QQ群）</div>
-                        <img src="https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/qqgroup.jpg" th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/img/ZXPDMW/qqgroup.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <img  th:src="@{https://zwyblog.oss-cn-beijing.aliyuncs.com/QQGroup.png}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>

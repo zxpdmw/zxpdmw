@@ -27,19 +27,6 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
-
-    /**
-    * @Description: loginPage
-    * @Param: []
-    * @return: java.lang.String
-    * @Author: ZXP
-    * @Date: 2020/6/28-11:15
-    */
-//    @GetMapping
-//    public String loginPage(){
-//        return "admin/login";
-//    }
-
    /**
    * @Description: login 登录检验
    * @Param: [username, password, session, attributes]
