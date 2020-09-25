@@ -23,7 +23,6 @@ spring:
 logging:
   level:
     root: warn
-    com.star: info
   file:
     name: log/blog-pro.log
 

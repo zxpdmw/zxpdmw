@@ -76,7 +76,8 @@
     </div>
 
     <div class="ui inverted section divider"></div>
-    <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">ZXPDMW</a>
+    <a rel="nofollow" href="http://beian.miit.gov.cn" target="_blank">
+      皖ICP备2020016708号</a>
   </div>
 
 </footer>
@@ -117,7 +118,7 @@
     }
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+        var create_time = Math.round(new Date(Date.UTC(2020, 05, 25, 15, 15, 15)).getTime() / 1000);
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
